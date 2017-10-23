@@ -8,5 +8,9 @@ class User < ApplicationRecord
             uniqueness: { case_sensitive: false }
 
   has_secure_password
+  # password_digestという属性に保存可能になる
+  # password、password_confirmationが使えるようになる
+  # authenticateメソッドの定義
+  
   validates :password, presence: true, length: { minimum: 6 }
 end
