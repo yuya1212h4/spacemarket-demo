@@ -11,6 +11,6 @@ class User < ApplicationRecord
   # password_digestという属性に保存可能になる
   # password、password_confirmationが使えるようになる
   # authenticateメソッドの定義
-  
+
   validates :password, presence: true, length: { minimum: 6 }
 end
