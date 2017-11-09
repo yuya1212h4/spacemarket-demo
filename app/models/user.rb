@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  attr_accessor :remember_token
   before_save { self.email = email.downcase } # データベースに保存するために全ての文字列を小文字に変換を行う
   # self.email.downcaseでも良かったが、右辺は省略可能
 
@@ -24,5 +25,11 @@ class User < ApplicationRecord
   # ランダムなトークンを返す
   def User.new_token
     SecureRandom.urlsafe_base64
+  end
+
+  # 永続化セッションのためにユーザーをデータベースに記憶する
+  def remember
+    self.remember_token = User.new_token
+    update_attribute(:remember_digest, User.digest(remember_token))
   end
 end
