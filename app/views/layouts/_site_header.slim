@@ -1,0 +1,21 @@
+.dashboard-container
+  .site-header__campaign-date-box
+
+  p.site-header__campaign-titte
+
+.site-header#js-site-header__fixed
+  = link_to "トップ画面", "#"
+
+  = link_to "ご利用ガイド", "#"
+  = link_to "ヘルプ", "#"
+
+  / ログイン中
+  - if logged_in?
+    = link_to "スペースを掲載する", "#"
+    = link_to "ログアウト", logout_path, method: :delete
+
+  / ログアウト中
+  - else
+
+    = link_to "ログイン", login_path
+    = link_to "新規登録", signup_path
