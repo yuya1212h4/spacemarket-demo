@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'slim'
 gem 'jquery-rails'
 gem 'bcrypt'
+gem 'devise'
+gem 'omniauth'
 gem 'omniauth-facebook'
 
 group :development, :test do
