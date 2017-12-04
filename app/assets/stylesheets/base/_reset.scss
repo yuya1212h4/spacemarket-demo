@@ -1,0 +1,20 @@
+@import "./lib/sanitize";
+
+:root, html, body {
+  width: 100%;
+}
+*{
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: $color-black;
+}
+a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
