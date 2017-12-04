@@ -1,22 +1,35 @@
-.dashboard-container
-  .site-header__campaign-date-box
+header.Siteheader.dashboard-container
+  = link_to "#" do
+    .Siteheader__campaign
+      .Siteheader__campaign-date-box
+        .Siteheader__campaign-date-box-inner
+          p.Siteheader__campaign-date
+            | 2017年
+            br
+            | 12月31日
+            br
+            | まで
+      .Siteheader__campaign-title
+        p 法人アカウント登録キャンペーン! 5.000円オフのクーポンプレゼント!
+      .Siteheader__campaign-button-box
+        .Siteheader__campaign-button.Button.Button__white キャンペーン詳細へ
 
-  p.site-header__campaign-titte
+  .Siteheader__bottom#js-site-header__fixed
+    p.Siteheader__bottom-fl
+      = link_to root_path do
+        = image_tag("")
+    ul.Siteheader__bottom-nav
+      li= link_to "ご利用ガイド", "#"
+      li= link_to "ヘルプ", "#"
 
-.site-header#js-site-header__fixed
-  = link_to "トップ画面", "#"
+      / ログイン中
+      - if logged_in?
+        li= link_to "スペースを掲載する", "#"
+        li= link_to "ログアウト", logout_path, method: :delete
 
-  = link_to "ご利用ガイド", "#"
-  = link_to "ヘルプ", "#"
-
-  / ログイン中
-  - if logged_in?
-    = link_to "スペースを掲載する", "#"
-    = link_to "ログアウト", logout_path, method: :delete
-
-  / ログアウト中
-  - else
-
-    = link_to "ログイン", login_path
-    = link_to "新規登録", signup_path
-    = link_to "facebookでログイン", user_facebook_omniauth_authorize_path
+      / ログアウト中
+      - else
+        li= link_to "ログイン", login_path
+        li= link_to "新規登録", signup_path
+        li= link_to "スペースを掲載する", root_path, class: "Button Button__green"
+        / li= link_to "facebookでログイン", user_facebook_omniauth_authorize_path
