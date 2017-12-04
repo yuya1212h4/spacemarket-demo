@@ -1,0 +1,102 @@
+.RoomContent {
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__ranking {
+    position: absolute;
+    left: 10px;
+    &--no1 {
+      background-color: $color-yellow;
+    }
+    &--no2 {
+      background-color: #c2cad9;
+    }
+    &--no3 {
+      background-color: #da7e3f;
+    }
+    &__icon {
+      &--body{
+        border-left: 1px solid rgba(255, 255, 255, 0.6);
+        border-right: 1px solid rgba(255, 255, 255, 0.6);
+        width: 32px;
+        height: 56px;
+        padding-top: 8px;
+        background-size: 24px 14px;
+        text-align: center;
+      }
+      &--number{
+        display: block;
+        font-weight: bold;
+        color: $color-gray-thin;
+        margin-top: 18px;
+      }
+    }
+  }
+  &__body {
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 6px  rgba(0, 0, 0, 0.3);
+    position: relative;
+    &--price {
+      background-color: $color-black;
+      color: $color-white;
+      position: absolute;
+      left: 10px;
+      bottom: 80px;
+      padding: 8px;
+      border-radius: 3px;
+      font-size: 16px;
+      display: flex;
+    }
+    &--per {
+      font-size: 10px;
+      font-weight: normal;
+      padding-top: 7px;
+    }
+    &--icon {
+      :after {
+        top: 100%;
+        border-style: solid;
+        border-width: 0px 19px 19px 19px;
+        border-bottom: .0em solid transparent;
+
+      }
+      &--fa{
+        padding: 3px 2px 0;
+        color: #f2d42b;
+      }
+    }
+  }
+  &__image {
+    height: 230px;
+    width: 346px;
+  }
+  &__item {
+    margin: 8px 10px 12px;
+    &--inner{
+
+    }
+    &--title {
+      font-size: 14px;
+      font-weight: bold;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin: 2px 0;
+
+    }
+    &--info {
+      margin: 6px 0 8px;
+      font-size: 11px;
+      color: $color-gray-thin;
+      margin-right: 5px;
+      display: flex;
+      align-items: center;
+    }
+    &--fa {
+      color: #d0d1cf;
+    }
+  }
+}

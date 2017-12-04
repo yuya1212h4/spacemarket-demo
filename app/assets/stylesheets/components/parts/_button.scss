@@ -1,0 +1,25 @@
+.Button{
+  font-size: 14px;
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  line-height: 1;
+  cursor: pointer;
+    &__white {
+      background-color: $color-white;
+      border-bottom: 1px solid #eee;
+    }
+    &__green {
+      background-color: $color-green;
+      border-bottom: 1px solid $color-green;
+      color: $color-white;
+    }
+    &__blue {
+      background-color: $color-lightblue;
+      border-bottom: 1px solid $color-blue;
+      color: $color-white;
+    }
+}

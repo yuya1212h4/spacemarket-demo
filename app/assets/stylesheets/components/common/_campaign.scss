@@ -1,0 +1,53 @@
+.Campaign {
+  &__container {
+    width: 100%;
+    min-height: 1px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  &__body {
+    box-shadow: 2px 2px 6px  rgba(0, 0, 0, 0.3);
+    &:hover {
+      opacity: 0.7;
+    }
+    &--image {
+      width: 100%;
+    }
+  }
+  &__image {
+    height: 160px;
+    width: 345px;
+  }
+  &__subtitle {
+    width: 100%;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    padding: 8px 8px;
+    line-height: 1.4;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 3px 3px;
+    color: $color-white;
+    &--red {
+      background-color: $color-red;
+    }
+    &--green {
+      background-color: $color-green;
+    }
+    &--blue {
+      background-color: $color-blue;
+    }
+  }
+  &__term {
+    font-size: 10px;
+    margin-top: 10px;
+    color: $color-gray;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'slim'
 gem 'jquery-rails'
+gem 'font-awesome-sass'
 gem 'bcrypt'
 gem 'devise'
 gem 'omniauth'
