@@ -1,0 +1,222 @@
+.Topcontent
+  .Topcontent__head
+    = image_tag("top/main_logo.png", class: "Topcontent__image", alt: "スペースマーケット")
+  .Topcontent__information
+    h1 10000件のレンタルスペースから、目的に合ったスペースをかんたん予約
+
+.Topmenu
+  .Topmenu__container
+    .Topmenu__container__main
+      ul.l-low
+        li.Topmenu__list.l-thirdColumn
+          = link_to "#", class: "Topmenu__button" do
+            = image_tag("top/icon-party.png", class: "Topmenu__icon")
+            span.Topmenu__list__text
+              | パーティー
+              span.Topmenu__list__num
+                | 4592件
+            i.fa.fa-angle-right.Topmenu__list__fa
+        li.Topmenu__list.l-thirdColumn
+          = link_to "#", class: "Topmenu__button" do
+            = image_tag("top/icon-class.png", class: "Topmenu__icon")
+            span.Topmenu__list__text
+              | 会議
+              span.Topmenu__list__num
+                | 6759件
+            i.fa.fa-angle-right.Topmenu__list__fa
+        li.Topmenu__list.l-thirdColumn
+          = link_to "#", class: "Topmenu__button" do
+            = image_tag("top/icon-photo.png", class: "Topmenu__icon")
+            span.Topmenu__list__text
+              | 写真撮影
+              span.Topmenu__list__num
+                | 6159件
+            i.fa.fa-angle-right.Topmenu__list__fa
+
+      ul.l-low
+        li.Topmenu__list.l-quaterColumn
+          = link_to "#", class: "Topmenu__button" do
+            = image_tag("top/icon-film_shoot.png", class: "Topmenu__icon")
+            span.Topmenu__list__text
+              | ロケ撮影
+              span.Topmenu__list__num
+                | 4592件
+            i.fa.fa-angle-right.Topmenu__list__fa
+        li.Topmenu__list.l-quaterColumn
+          = link_to "#", class: "Topmenu__button" do
+            = image_tag("top/icon-event.png", class: "Topmenu__icon")
+            span.Topmenu__list__text
+              | イベント
+              span.Topmenu__list__num
+                | 6759件
+            i.fa.fa-angle-right.Topmenu__list__fa
+        li.Topmenu__list.l-quaterColumn
+          = link_to "#", class: "Topmenu__button" do
+            = image_tag("top/icon-stay.png", class: "Topmenu__icon")
+            span.Topmenu__list__text
+              | 宿泊
+              span.Topmenu__list__num
+                | 6159件
+            i.fa.fa-angle-right.Topmenu__list__fa
+        li.Topmenu__list.l-quaterColumn
+          = link_to "#", class: "Topmenu__button" do
+            = image_tag("top/icon-other.png", class: "Topmenu__icon--other")
+            span.Topmenu__list__text
+              | その他
+              span.Topmenu__list__num
+                | 6159件
+            i.fa.fa-angle-right.Topmenu__list__fa
+
+  .Topmenu__other--search
+    h3.Topmenu__other--search--title
+      i.fa.fa-search
+      | カテゴリーから探す
+    ul.Topmenu__other--search--list
+      li=link_to "エリア", root_path
+      li=link_to "人数", root_path
+      li=link_to "会場タイプ", root_path
+      li=link_to "アメニティ", root_path
+
+.MainContent
+  .MainContent__top
+    h3.MainContent__title スタッフのおすすめ
+    .MainContent__main.l-low
+      .MainContent__container.l-quaterColumn
+        .MainContent__body
+          = link_to "#", class: "MainContent__link" do
+            .MainContent__body--image
+              = image_tag("top_sample/sample1-1.png", class: "MainContent__image")
+          h3.MainContent__subtitle 格安で借りられるレンタルスペース・会場まとめ
+      .MainContent__container.l-quaterColumn
+        .MainContent__body
+          = link_to "#", class: "MainContent__link" do
+            .MainContent__body--image
+              = image_tag("top_sample/sample1-2.png", class: "MainContent__image")
+          h3.MainContent__subtitle キッチンが使えるレンタルスペースまとめ
+      .MainContent__container.l-quaterColumn
+        .MainContent__body
+          = link_to "#", class: "MainContent__link" do
+            .MainContent__body--image
+              = image_tag("top_sample/sample1-3.png", class: "MainContent__image")
+          h3.MainContent__subtitle クリスマスパーティ開催場所にピッタリな会場・レンタルスペース
+      .MainContent__container.l-quaterColumn
+        .MainContent__body
+          = link_to "#", class: "MainContent__link" do
+            .MainContent__body--image
+              = image_tag("top_sample/sample1-4.png", class: "MainContent__image")
+          h3.MainContent__subtitle 【貸切・個室】忘年会・新年会におすすめな宴会場２０１７/１８年版
+
+    .MainContent__more--area
+      = link_to "スタッフのおすすめをもっと見る", root_path, class: "MainContent__more--link"
+      i.fa.fa-angle-right.MainContent__more--fa
+
+.MainContent
+  .MainContent__top
+    h3.MainContent__title 開催中のキャンペーン
+    .MainContent__main.l-low
+      .Campaign__container.l-thirdColumn
+        .Campaign__body
+          = link_to "#", class: "MainContent__link" do
+            .Campaign__body--image
+              = image_tag("top_sample/sample2-1.png", class: "Campaign__image")
+          h3.Campaign__subtitle.Campaign__subtitle--red スペースマーケットで〈脱〉お決まりの忘年会！忘年…
+        p.Campaign__term 2017年10月20日〜2017年12月25日
+      .Campaign__container.l-thirdColumn
+        .Campaign__body
+          = link_to "#", class: "MainContent__link" do
+            .Campaign__body--image
+              = image_tag("top_sample/sample2-2.png", class: "Campaign__image")
+          h3.Campaign__subtitle.Campaign__subtitle--green 友人や会社の同僚と最高のクリスマスを！クリスマス…
+        p.Campaign__term 2017年10月20日〜2017年12月25日
+      .Campaign__container.l-thirdColumn
+        .Campaign__body
+          = link_to "#", class: "MainContent__link" do
+            .Campaign__body--image
+              = image_tag("top_sample/sample2-3.png", class: "Campaign__image")
+          h3.Campaign__subtitle.Campaign__subtitle--blue 法人アカウント登録キャンペーン！5,000円オフの…
+        p.Campaign__term 2017年10月20日〜2017年12月25日
+
+    .MainContent__more--area
+      = link_to "キャンペーンをもっと見る", root_path, class: "MainContent__more--link"
+      i.fa.fa-angle-right.MainContent__more--fa
+
+.MainContent
+  .MainContent__top.Regist
+    .Regist__points
+      .Regist__points--inner
+        p 今なら2,000ポイントプレゼント！
+    h2.Regist__points--title
+      | 今すぐ会員登録して、スペースを貸し借りしてみよう
+    = link_to "新規登録（無料）", root_path, class: "Regist__top--button Button__blue"
+    p.Regist__bonus--text
+      | 今なら会員登録した方全員に、すべてのスペースの予約で利用出来る2,000円分のポイントをプレゼント
+
+.MainContent
+  .MainContent__top
+    h3.MainContent__title パーティー
+    .MainContent__main.l-low
+      .RoomContent__container
+
+        .RoomContent__body
+          .RoomContent__ranking
+            .RoomContent__ranking__icon--body.RoomContent__ranking--no1
+              .RoomContent__ranking__icon--number 1
+          .RoomContent__body--price
+            | ¥2,000
+            .RoomContent__body--per
+              | /時間
+            .RoomContent__body--icon
+              i.fa.fa-bolt.RoomContent__body--icon--fa
+          = image_tag("room_sample/sample1.png", class: "RoomContent__image")
+          .RoomContent__item
+            .RoomContent__item--inner
+              h3.RoomContent__item--title 【港区】キッチンも使えるバルスペース ワイン…
+            ul.RoomContent__item--info
+              .fa.fa-user.RoomContent__item--fa
+              li ~20人
+              .fa.fa-map-marker.RoomContent__item--fa
+              li 東京都港区
+
+        .RoomContent__body
+          .RoomContent__ranking
+            .RoomContent__ranking__icon--body.RoomContent__ranking--no2
+              .RoomContent__ranking__icon--number 2
+          .RoomContent__body--price
+            | ¥2,000
+            .RoomContent__body--per
+              | /時間
+            .RoomContent__body--icon
+              i.fa.fa-bolt.RoomContent__body--icon--fa
+          = image_tag("room_sample/sample2.png", class: "RoomContent__image")
+          .RoomContent__item
+            .RoomContent__item--inner
+              h3.RoomContent__item--title 【港区】キッチンも使えるバルスペース ワイン…
+            ul.RoomContent__item--info
+              .fa.fa-user.RoomContent__item--fa
+              li ~20人
+              .fa.fa-map-marker.RoomContent__item--fa
+              li 東京都港区
+
+        .RoomContent__body
+          .RoomContent__ranking
+            .RoomContent__ranking__icon--body.RoomContent__ranking--no3
+              .RoomContent__ranking__icon--number 3
+          .RoomContent__body--price
+            | ¥2,000
+            .RoomContent__body--per
+              | /時間
+            .RoomContent__body--icon
+              i.fa.fa-bolt.RoomContent__body--icon--fa
+          = image_tag("room_sample/sample2.png", class: "RoomContent__image")
+          .RoomContent__item
+            .RoomContent__item--inner
+              h3.RoomContent__item--title 【港区】キッチンも使えるバルスペース ワイン…
+            ul.RoomContent__item--info
+              .fa.fa-user.RoomContent__item--fa
+              li ~20人
+              .fa.fa-map-marker.RoomContent__item--fa
+              li 東京都港区
+
+  .MainContent__more--area
+    = link_to "パーティーで利用出来るスペースをもっと見る", root_path, class: "MainContent__more--link"
+    i.fa.fa-angle-right.MainContent__more--fa
