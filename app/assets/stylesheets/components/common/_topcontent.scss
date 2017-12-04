@@ -1,0 +1,20 @@
+.Topcontent {
+  padding-top: 48px;
+  padding-bottom: 24px;
+  &__head {
+    text-align: center;
+    width: 360px;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+  &__image {
+    width: 360px;
+  }
+  &__information {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 24px;
+    line-height: 1.5;
+  }
+}
