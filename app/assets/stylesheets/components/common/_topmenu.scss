@@ -1,0 +1,89 @@
+.Topmenu {
+  &__container {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 24px;
+    &__main{
+    }
+  }
+  &__list {
+    position: relative;
+    margin: 0 12px;
+    &__text {
+      font-size: 18px;
+      vertical-align: middle;
+      margin-left: 12px;
+      font-weight: bold;
+      color: $color-gray-thin;
+      display: inline-block;
+    }
+    &__num {
+      font-size: 10px;
+      color: #a3a3a3;
+      display: block;
+      font-weight: normal;
+    }
+    &__fa {
+      padding-left: 5px;
+      font-size: 18px;
+      right: 24px;
+      top: 50%;
+      color: #8EF1FF;
+      position: absolute;
+    }
+  }
+  &__other--search{
+  }
+  &__button {
+    display: block;
+    background-color: #f6f6f6;
+    border-radius: 3px;
+    padding: 22px 20px;
+    margin-top: 20px;
+    min-height: 63px;
+    box-shadow: 2px 2px 6px  rgba(0, 0, 0, 0.3);
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__icon {
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+    &--other {
+      height: 10px;
+    }
+  }
+
+  &__other--search {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0 8px;
+    font-size: 13px;
+    &--title{
+      display: flex;
+      font-size: 13px;
+      font-weight: bold;
+      align-items: center;
+      margin-right: 32px;
+    }
+    &--list {
+      display: flex;
+      align-items: center;
+      li:first-child{
+        border-left: 0px;
+        padding-left: 0px;
+        margin-left: 0px;
+      }
+      li {
+        border-left: 1px solid $color-gray;
+        padding-left: 32px;
+        margin-left: 32px;
+      }
+      a {
+        color: $color-blue;
+        font-size: 14px;
+      }
+    }
+  }
+}
