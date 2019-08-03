@@ -1,24 +1,112 @@
-# README
+# Space
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## association
+- has_many :categories, through: :category_spaces
+- has_many :categories_spaces
+- has_many :payments, through: :payment_spaces
+- has_many :payment_spaces
+- has_many :space_images
+- has_many :space_movies
+- has_many :prices
+- belongs_to :host
+- has_one :address
 
-Things you may want to cover:
+## columns
+- title           :string
+- description     :text
+- equipment       :text
+- size            :integer
+- capacity        :integer
+- business_hours  :integer
+- attachment      :string
+- important_point :text
+- contact         :text
+- host            :references
 
-* Ruby version
+# category_space
+## association
+- belongs_to :space
+- belongs_to :category
 
-* System dependencies
+## columns
+- space     references
+- category  references
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+# category
+## association
+- has_many :category_spaces
+- has_many :spaces, through: :category_spaces
 
-* How to run the test suite
+## columns
+- event_type   :string, null: false
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+# payment_space
+## association
+- belongs_to :space
+- belongs_to :payment
 
-* ...
+## columns
+- space    :references
+- payment  :references
+
+
+# payment
+## association
+- has_many :spaces, through: :payment_spaces
+- has_many :payment_spaces
+
+## columns
+- payment_way   :string
+
+
+# space_image
+## association
+- belongs_to :space
+
+## columns
+- image     :string, null: false
+- image_type   :integer { main: 0, sub: 1}, null: false
+- space     :references
+
+
+# space_movie
+## association
+- belongs_to :space
+
+## columns
+- movie    :string, null: false
+- space    :references
+
+
+# price
+## association
+- belongs_to :space
+
+## columns
+- amount   :integer, null: false
+- title    :string, null: false
+- description  :text
+
+
+# host
+## association
+- has_many :spaces
+
+## columns
+- name  :stringm null :false
+- description :text, null: false
+
+
+# address
+## association
+- belongs_to :space
+
+## columns
+- street_address   :string, null: false
+- latitude         :double
+- longitude        :double
+- access           :string
+- spaces           :references
